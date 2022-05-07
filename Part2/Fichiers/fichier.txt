@@ -1,0 +1,9 @@
+Python
+est
+un
+super
+langage
+de
+programmation
+Ceci est un fichier écrit en Python
+Ceci est un fichier écrit en Python
