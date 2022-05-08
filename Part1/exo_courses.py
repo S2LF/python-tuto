@@ -48,5 +48,3 @@ while choice != 5 :
 
      print('')
      print('-' *50)
-
-# check if choice is a number

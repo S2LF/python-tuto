@@ -49,4 +49,3 @@ if me <= 0:
     print("Vous avez perdu ! 😥")
 elif enemy <= 0:
     print("Vous avez gagné ! 🎉🎉🎉")
-
