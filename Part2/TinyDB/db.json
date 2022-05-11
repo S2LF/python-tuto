@@ -1,0 +1,53 @@
+{
+    "_default": {
+        "1": {
+            "name": "John Doe",
+            "score": 10,
+            "roles": [
+                "Junior"
+            ]
+        },
+        "3": {
+            "name": "Jane Doe",
+            "score": 120,
+            "roles": [
+                "Junior"
+            ],
+            "role": [
+                "Pythonista"
+            ]
+        },
+        "4": {
+            "name": "Joe Doe",
+            "score": 50,
+            "roles": [
+                "Junior"
+            ]
+        }
+    },
+    "Users": {
+        "1": {
+            "name": "John Doe",
+            "score": 0
+        },
+        "2": {
+            "name": "Jane Doe",
+            "score": 0
+        },
+        "3": {
+            "name": "Joe Doe",
+            "score": 0
+        }
+    },
+    "Roles": {
+        "1": {
+            "name": "Junior"
+        },
+        "2": {
+            "name": "Senior"
+        },
+        "3": {
+            "name": "Pythonista"
+        }
+    }
+}
