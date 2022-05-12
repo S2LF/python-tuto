@@ -57,8 +57,7 @@ print(dossier.joinpath("readme.txt").read_text())
 # Scanner un dossier
 for f in Path().home().iterdir():
     home_dirs = [f for f in Path().home().iterdir() if f.is_dir()]
-
-print(home_dirs)
+    print(home_dirs)
 
 p = Path("C:\\laragon\\www\\python")
 
