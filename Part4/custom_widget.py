@@ -1,12 +1,18 @@
-from random import randrange
+from random import randrange, random
 from PySide6.QtWidgets import QApplication, QWidget, QPushButton, QHBoxLayout
 
 class RandomButton(QPushButton):
-    def __init__(self, text):
+    def __init__(self, text, size=48, flat=False):
         super().__init__(text)
+        self.setText(str(randrange(999)))
+        self.setMinimumSize(size, size)
+        self.setFlat(flat)
+        self.setCheckable(flat)
+        self.random_color()
+        self.clicked.connect(self.random_color)
 
-    def randomize(self):
-        self.setText(str(randrange(100)))
+    def random_color(self):
+        self.setStyleSheet(f"color: rgb({randrange(255)}, {randrange(255)}, {randrange(255)}); background-color: rgb({randrange(255)}, {randrange(255)}, {randrange(255)});")
 
 class MainWindow(QWidget):
     def __init__(self):
@@ -14,13 +20,9 @@ class MainWindow(QWidget):
 
         self.setWindowTitle("Customer Button")
         self.layout = QHBoxLayout(self)
-        btn_random = RandomButton(str(randrange(999)))
-        btn_random.setMinimumSize(48, 48)
-        btn_random.setFlat(True)
-        btn_random.setCheckable(True)
-        btn_random.setStyleSheet(f"color: rgb(255, 0, 0);")
-
-        self.layout.addWidget(btn_random)
+        for _ in range(12):
+            btn_random = RandomButton(str(randrange(999)), randrange(10, 200), True if random() > 0.5 else False)
+            self.layout.addWidget(btn_random)
 
         self.setFocus()
 
